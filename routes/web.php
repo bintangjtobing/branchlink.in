@@ -16,8 +16,18 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login.master');
+    return view('login.signin');
 });
 Route::get('/register', function () {
     return view('login.register');
+});
+Route::post('/login', 'LoginController@validatelogin');
+Route::get('/logout/{id}', 'LoginController@logout');
+
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/dashboard', function () {
+        return view('dashboard.content.index');
+    });
 });

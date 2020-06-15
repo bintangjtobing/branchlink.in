@@ -1,0 +1,1 @@
+Berhasil {{auth()->user()->name}}

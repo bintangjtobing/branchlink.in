@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Branchlink.in | Login</title>
+   <title>Branchlink.in | @yield('title')</title>
    <link rel="icon" href="images/icon.png">
    <link rel="stylesheet" type="text/css" href="auth/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="auth/css/fontawesome-all.min.css">
@@ -18,7 +18,7 @@
       <div class="website-logo">
          <a href="/login">
             <div class="logo">
-               <img class="logo-size" src="/auth/images/logo-light.png" alt="">
+               <img class="logo-size" src="/auth/images/logo-light.png" alt="Logo Branchlink.in">
             </div>
          </a>
       </div>
@@ -29,22 +29,8 @@
                <img src="auth/images/graphic3.svg" alt="">
             </div>
          </div>
-         <div class="form-holder">
-            <div class="form-content">
-               <div class="form-items">
-                  <h3>Login to account</h3>
-                  <p>Login to your Branchlink.in admin.</p>
-                  <form>
-                     <input class="form-control" type="text" name="username" placeholder="E-mail Address" required>
-                     <input class="form-control" type="password" name="password" placeholder="Password" required>
-                     <div class="form-button">
-                        <button id="submit" type="submit" class="ibtn">Login</button> <a href="/register">Don't have an
-                           account?</a>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
+         @yield('content')
+
       </div>
    </div>
    <script src="auth/js/jquery.min.js"></script>

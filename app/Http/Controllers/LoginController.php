@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
+use App\User;
 
 class LoginController extends Controller
 {
@@ -15,7 +18,7 @@ class LoginController extends Controller
             'password' => $request->password,
             'status' => 'active',
         ])) {
-            return redirect('/dashboard');
+            return redirect('/administrator');
         }
         return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }
@@ -35,5 +38,21 @@ class LoginController extends Controller
     {
         Auth::logout();
         return redirect('/login');
+    }
+    public function registeraccount(Request $request)
+    {
+        $this->validate($request, [
+            'username' => 'required|unique:users|min:5|regex:/^\S*$/u',
+            'email' => 'required|unique:users|email',
+        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->unpassword = $request->password;
+        $user->status = 'unactive';
+        $user->save();
+        return redirect('/login')->with('sukses', 'You have already signup your account! Now try to login it!');
     }
 }

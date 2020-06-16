@@ -1,7 +1,20 @@
 @extends('login.master')
 @section('title','Login')
 @section('content')
+
 <div class="form-holder">
+   @if(session('sukses'))
+   <div class="form-row">
+      <div class="my-3 offset-4 col-md-4">
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations!</strong> {{session('sukses')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+      </div>
+   </div>
+   @endif
    <div class="form-content">
       <div class="form-items">
          <h3>Login to account</h3>

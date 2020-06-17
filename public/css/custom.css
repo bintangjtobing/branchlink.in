@@ -1,8 +1,28 @@
-/* 
+.logodash {
+   max-width: 120px;
+}
 
-1. Add your custom Css styles below
-2. Place the this code in your template: 
+.btn-dashboard {
+   background-color: #f3751e;
+   color: #fff;
+}
 
- <link href="css/custom.css" rel="stylesheet">
+.btn-dashboard:hover {
+   background-color: #f38739;
+   color: #fff;
+   transition: ease-in-out;
+}
 
-*/
+.media {
+   background-color: #fff;
+   margin-top: 2rem !important;
+   padding: 1.5rem;
+   border-radius: .5rem;
+   -webkit-box-shadow: 0px 3px 21px -17px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 0px 3px 21px -17px rgba(0, 0, 0, 0.75);
+   box-shadow: 0px 3px 21px -17px rgba(0, 0, 0, 0.75);
+}
+
+.main {
+   background-color: #f5f6f8;
+}

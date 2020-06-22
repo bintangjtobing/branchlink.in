@@ -23,11 +23,16 @@ Route::get('/register', function () {
 });
 Route::post('/login', 'LoginController@validatelogin');
 Route::get('/logout/{id}', 'LoginController@logout');
-Route::post('/register-data/{tokens}','LoginController@registeraccount');
+Route::post('/register-data/{tokens}', 'LoginController@registeraccount');
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/administrator', function () {
-        return view('dashboard.content.index');
-    });
+    Route::get('/administrator', 'LinksController@index');
+    Route::get('/link', 'LinksController@index');
+    Route::post('/add-links', 'LinksController@addlink');
+    Route::get('/delete/{id}', 'LinksController@deletelink');
+    Route::post('/update-links/{id}', 'LinksController@updatelink');
+    Route::post('/add-avatar/{id}', 'LoginController@addavatar');
+    Route::get('/appearance', 'LinksController@appearance');
+    Route::get('/settings', 'LinksController@settings');
 });

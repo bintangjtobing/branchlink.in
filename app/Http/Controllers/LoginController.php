@@ -55,4 +55,16 @@ class LoginController extends Controller
         $user->save();
         return redirect('/login')->with('sukses', 'You have already signup your account! Now try to login it!');
     }
+    public function addavatar(Request $request, $id)
+    {
+        $user = User::find($id);
+        if ($request->hasFile('avatar')) {
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            $request->file('avatar')->move('media/', $filename);
+            $user->avatar = $filename;
+        }
+        $user->save();
+        return back()->with('selesai', 'Avatar uploaded!');
+    }
 }

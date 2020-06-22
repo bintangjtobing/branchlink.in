@@ -58,6 +58,8 @@
    <!-- modernizr JS
 		============================================ -->
    <script src="dashboard/js/vendor/modernizr-2.8.3.min.js"></script>
+   <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"
+      type="96955bc328fcaeae7f75a015-text/javascript"></script>
 </head>
 
 <body>
@@ -90,13 +92,13 @@
    <div class="mobile-menu-area">
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
                <div class="mobile-menu">
                   <nav id="dropdown">
                      <ul class="mobile-menu-nav">
-                        <li><a href="/links">Links</a>
+                        <li><a href="/link">Link</a>
                         </li>
-                        <li><a href="/themes">Themes</a></li>
+                        <li><a href="/appearance">Appearance</a></li>
                         <li><a href="/settings">Settings</a></li>
                      </ul>
                   </nav>
@@ -110,73 +112,18 @@
    <div class="main-menu-area mg-tb-40">
       <div class="container">
          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-               <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                  <li class="active"><a href="/links">Links</a></li>
-                  <li><a href="/themes">Themes</a></li>
-                  <li><a href="/settings">Settings</a></li>
-               </ul>
-
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- Main Menu area End-->
-   <!-- Start Status area -->
-   <div class="main">
-      <div class="notika-status-area">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-                  <div class="notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                     <button type="button" class="btn btn-dashboard notika-btn-dashboard waves-effect btn-block btn-lg"
-                        data-toggle="modal" data-target="#exampleModal">
-                        Add new link
-                     </button>
-                     <div class="modal fade" id="exampleModal" role="dialog">
-                        <div class="modal-dialog modals-default">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                 <h2>Modal title</h2>
-                                 <p>Curabitur blandit mollis lacus. Nulla sit amet est. Suspendisse nisl elit, rhoncus
-                                    eget, elementum ac, condimentum eget, diam. Donec mi odio, faucibus at, scelerisque
-                                    quis, convallis in, nisi. Cras sagittis.</p>
-                              </div>
-                              <div class="modal-footer">
-                                 <button type="button" class="btn btn-default" data-dismiss="modal">Save
-                                    changes</button>
-                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- End Status area-->
-   <!-- Start Sale Statistic area-->
-   <div class="sale-statistic-area">
-      <div class="container">
-         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-               <div class="media">
-                  <div class="media-body">
-                     <h5 class="mt-0">Enter title</h5>
-                     <p>https://www.instagram.com/bintangjtobing/</p>
-                  </div>
-               </div>
+               <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                  <li class="@yield('activelink')"><a href="/link">Link</a></li>
+                  <li class="@yield('activethemes')"><a href="/appearance">Appearance</a></li>
+                  <li class="@yield('activesettings')"><a href="/settings">Settings</a></li>
+               </ul>
             </div>
+
          </div>
       </div>
    </div>
-   </div>
+   @yield('content')
    <!-- Start Footer area-->
    <div class="footer-copyright-area">
       <div class="container">
@@ -191,6 +138,16 @@
          </div>
       </div>
    </div>
+   <script type="text/javascript">
+      function updatesubmit() {
+         document.getElementById("formupdate").submit();
+      }
+   </script>
+   <script type="text/javascript">
+      function form_submit() {
+         document.getElementById("formaction").submit();
+      }
+   </script>
    <!-- End Footer area-->
    <!-- jquery
 		============================================ -->
@@ -263,7 +220,18 @@
          $('[data-toggle="tooltip"]').tooltip()
       })
    </script>
+   <script>
+      function copyFunction() {
+         var CopyText = document.getElementById('accountbranchlink');
+         /* Select the text field */
+         CopyText.select();
+         /* Copy the text inside the text field */
+         document.execCommand("copy");
 
+         /* Alert the copied text */
+         alert("URL Kamu berhasil dicopy: " + CopyText.value);
+      }
+   </script>
 </body>
 
 </html>

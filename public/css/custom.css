@@ -26,3 +26,54 @@
 .main {
    background-color: #f5f6f8;
 }
+
+.branchlinkshare {
+   background-color: #fff;
+   padding: 15px 25px;
+   border-radius: .25rem;
+}
+
+.branchlinkshare p {
+   margin: 0 0 0 !important;
+}
+
+.branchlinkshare a {
+   text-decoration: underline;
+}
+
+.branchlinkshare input {
+   text-decoration: underline;
+   width: 100%;
+   padding: 10px 0px;
+   border-radius: .25rem;
+   border: 0;
+}
+
+.branchlinkshare .copy {
+   padding: 10px 15px;
+   border: 1px solid #71767b;
+   border-radius: .25rem;
+   margin-top: .2rem;
+}
+
+.branchlinkshare .copy a {
+   text-decoration: none;
+   color: #71767b;
+}
+
+.branchlinkshare .copy:hover {
+   background-color: #f5f6f8;
+   cursor: pointer;
+}
+
+.pageopt {
+   background-color: #fff;
+   padding: 15px 25px;
+}
+
+.pageopt img {
+   object-fit: cover;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+}

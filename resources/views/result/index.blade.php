@@ -51,7 +51,7 @@
          <span class="logo"><img src="{!!asset('media/'.$linkss->avatar)!!}"
                alt="Display picture {{$linkss->name}}" /></span>
          <p>{{$linkss->titlepage}}<br>
-            Made by <a href="{{$linkss->instagram}}">@ {{$linkss->username}}</a>
+            Made by <a href="https://{{$linkss->instagram}}">@ {{$linkss->username}}</a>
          </p>
          @endforeach
       </header>

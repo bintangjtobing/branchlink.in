@@ -16,13 +16,67 @@
             </div>
             <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
                <div class="notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                  <h4>Page options</h4>
+                  <h3>Page options</h3>
                   <div class="pageopt">
                      <img class="userimg-profile" src="{{asset('media/'.auth()->user()->avatar)}}"><br>
                      <label for="">Upload Avatar</label>
                      <form action="/add-avatar/{{auth()->user()->id}}" enctype="multipart/form-data" method="post">
                         {{ csrf_field() }}
                         <input type="file" name="avatar" id="" class="form-control">
+                        <button type="submit" class="btn btn-primary btn-block"
+                           style="margin-top: 15px;">Upload</button>
+                     </form>
+                  </div>
+               </div>
+               <div class="notika-shadow sm-res-mg-t-50 tb-res-mg-t-50">
+                  <div class="pageopt">
+                     <h3>Page Informations</h3>
+                     <form action="/add-pageinformations/{{auth()->user()->id}}" enctype="multipart/form-data"
+                        method="post">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                           <label>Title page</label>
+                           <div class="nk-int-st">
+                              <input type="text" class="form-control input-sm" value="{{auth()->user()->titlepage}}"
+                                 name="titlepage" placeholder="Enter title page" required>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label>Email</label>
+                           <div class="nk-int-st">
+                              <input type="text" class="form-control input-sm" value="{{auth()->user()->email}}"
+                                 name="email" placeholder="Enter email" required>
+                           </div>
+                        </div>
+                        <h3>Social links</h3>
+                        <div class="form-group ic-cmp-int">
+                           <div class="form-ic-cmp">
+                              <i class="notika-icon notika-facebook"></i>
+                           </div>
+                           <div class="nk-int-st">
+                              <input type="text" name="facebook" class="form-control"
+                                 placeholder="facebook.com/yourusername" value="{{auth()->user()->facebook}}" required>
+                           </div>
+                        </div>
+                        <div class="form-group ic-cmp-int">
+                           <div class="form-ic-cmp">
+                              <i class="notika-icon notika-instagram"></i>
+                           </div>
+                           <div class="nk-int-st">
+                              <input type="text" name="instagram" class="form-control"
+                                 placeholder="instagram.com/yourusername" value="{{auth()->user()->instagram}}"
+                                 required>
+                           </div>
+                        </div>
+                        <div class="form-group ic-cmp-int">
+                           <div class="form-ic-cmp">
+                              <i class="notika-icon notika-twitter"></i>
+                           </div>
+                           <div class="nk-int-st">
+                              <input type="text" name="twitter" class="form-control"
+                                 placeholder="twitter.com/yourusername" value="{{auth()->user()->twitter}}" required>
+                           </div>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block"
                            style="margin-top: 15px;">Upload</button>
                      </form>

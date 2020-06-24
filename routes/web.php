@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,6 +28,15 @@ Route::get('/logout/{id}', 'LoginController@logout');
 Route::post('/register-data/{tokens}', 'LoginController@registeraccount');
 
 
+Route::get('/u/{username}/', 'viewLink@username');
+// Route::get('/{link}', function (Request $request, $link) {
+//     $userlink = DB::table('links')
+//         ->select('links.*')
+//         ->where('links.link', '=', $link)
+//         ->get();
+//     dd($userlink);
+// });
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/administrator', 'LinksController@index');
     Route::get('/link', 'LinksController@index');
@@ -35,4 +46,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/add-avatar/{id}', 'LoginController@addavatar');
     Route::get('/appearance', 'LinksController@appearance');
     Route::get('/settings', 'LinksController@settings');
+    Route::post('/add-pageinformations/{id}', 'LinksController@addinformations');
 });

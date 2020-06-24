@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/administrator';
 
     /**
      * Create a new controller instance.
@@ -48,7 +48,7 @@ class LoginController extends Controller
             'password' => $request->password,
             'status' => 'active',
         ])) {
-            return redirect('/dashboard');
+            return redirect('/administrator');
         }
         return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }

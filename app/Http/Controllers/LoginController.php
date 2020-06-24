@@ -19,6 +19,7 @@ class LoginController extends Controller
             'status' => 'active',
         ])) {
             return redirect('/administrator');
+            // dd(Auth::check());
         }
         return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }

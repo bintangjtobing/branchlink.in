@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
    <meta charset="utf-8">
@@ -99,7 +99,7 @@
                         <li><a href="/link">Link</a>
                         </li>
                         <li><a href="/appearance">Appearance</a></li>
-                        <li><a href="/settings">Settings</a></li>
+                        {{-- <li><a href="/settings">Settings</a></li> --}}
                      </ul>
                   </nav>
                </div>
@@ -116,7 +116,7 @@
                <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                   <li class="@yield('activelink')"><a href="/link">Link</a></li>
                   <li class="@yield('activethemes')"><a href="/appearance">Appearance</a></li>
-                  <li class="@yield('activesettings')"><a href="/settings">Settings</a></li>
+                  {{-- <li class="@yield('activesettings')"><a href="/settings">Settings</a></li> --}}
                </ul>
             </div>
 

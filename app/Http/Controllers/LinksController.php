@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\linkDB;
 use Auth;
+use App\optionaldb;
+use App\User;
 
 class LinksController extends Controller
 {
@@ -14,9 +16,12 @@ class LinksController extends Controller
         $link = DB::table('links')
             ->orderBy('links.created_at', 'DESC')
             ->select('links.*')
+            ->where('links.ownerid', '=', Auth::id())
             ->get();
+
         // dd($link);
         return view('dashboard.content.home', ['link' => $link]);
+        // return view('dashboard.content.home');
     }
     public function addlink(Request $request)
     {
@@ -54,10 +59,27 @@ class LinksController extends Controller
     }
     public function appearance()
     {
-        return view('dashboard.content.themes');
+        $getid =  auth()->user()->id;
+        $opt = DB::table('optionaldbs')
+            ->select('optionaldbs.*')
+            ->where('optionaldbs.userid', '=', $getid)
+            ->orderBy('optionaldbs.created_at', 'DESC')
+            ->first();
+        return view('dashboard.content.themes', ['opt' => $opt]);
     }
     public function settings()
     {
         return view('dashboard.content.settings');
+    }
+
+    public function addinformations(Request $request, $id)
+    {
+        $add = User::find($id);
+        $add->titlepage = $request->titlepage;
+        $add->instagram = $request->instagram;
+        $add->twitter = $request->twitter;
+        $add->facebook = $request->facebook;
+        $add->save();
+        return back()->with('selesai', 'Successfully complete your page informations.');
     }
 }

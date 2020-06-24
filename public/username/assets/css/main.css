@@ -2758,7 +2758,7 @@ ul.actions.fit.stacked {
 	ul.actions:not(.fixed) li>* {
 		width: 100%;
 	}
-
+	
 	ul.actions:not(.fixed) li:first-child {
 		padding-top: 0;
 	}

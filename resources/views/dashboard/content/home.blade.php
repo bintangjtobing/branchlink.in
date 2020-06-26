@@ -25,7 +25,7 @@
                                        <label>Enter title</label>
                                        <div class="nk-int-st">
                                           <input type="text" name="title" class="form-control input-sm"
-                                             placeholder="Enter title">
+                                             placeholder="Enter title" required>
                                        </div>
                                     </div>
                                  </div>
@@ -34,7 +34,7 @@
                                        <label>Enter link url</label>
                                        <div class="nk-int-st">
                                           <input type="url" name="linkurl" class="form-control input-sm"
-                                             placeholder="https://">
+                                             placeholder="https://" required>
                                        </div>
                                     </div>
                                  </div>

@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +30,7 @@ Route::post('/register-data/{tokens}', 'LoginController@registeraccount');
 
 
 Route::get('/u/{username}/', 'viewLink@username');
+Route::post('/urllink', 'viewLink@urllink');
 // Route::get('/{link}', function (Request $request, $link) {
 //     $userlink = DB::table('links')
 //         ->select('links.*')

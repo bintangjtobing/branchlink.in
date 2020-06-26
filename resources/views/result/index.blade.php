@@ -17,7 +17,7 @@
    <meta name="title" content="{{$itemlink->titlepage}} - {{$itemlink->name}}">
    <meta name="keywords" content="{{$itemlink->titlepage}}, {{$itemlink->name}}">
    <meta name="description"
-      content="Tempat kalian pengen tau di platform mana sih saya aktif? Nah disini akan menjawab dan kalian langsung tau apa apa saja aktifitas yang dilakukan. Hehehe">
+      content="Take your any link to branchlink, to discover all of your content. And help them to find you.">
    <meta name="author" content="Branchlink.in from Sarjanamalam">
    <meta name="robots" content="index, follow">
    <meta name="language" content="English">
@@ -30,7 +30,7 @@
    <meta property="og:url" content="{{URL::current()}}">
    <meta property="og:image" content="{!!asset('storage/img/covermcan.jpg')!!}">
    <meta property="og:description"
-      content="Tempat kalian pengen tau di platform mana sih saya aktif? Nah disini akan menjawab dan kalian langsung tau apa apa saja aktifitas yang dilakukan. Hehehe">
+      content="Take your any link to branchlink, to discover all of your content. And help them to find you.">
    <meta property="og:site_name" content="{{$itemlink->name}}.">
    <!-- Twitter -->
    <meta property="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
    <meta property="twitter:title" content="{{$itemlink->titlepage}} - {{$itemlink->name}}">
    <meta property="twitter:description"
       content="{{$itemlink->name}} page is made for personal creative curriculum vitae. Also for personal satisfaction and personal completeness in this digital age.">
-   <meta property="twitter:image" content="storage/img/covermcan.jpg">
+   <meta property="twitter:image" content="{!!asset('storage/img/covermcan.jpg')!!}">
    @endforeach
 </head>
 
@@ -50,8 +50,8 @@
          @foreach ($userlink->take(1) as $linkss)
          <span class="logo"><img src="{!!asset('media/'.$linkss->avatar)!!}"
                alt="Display picture {{$linkss->name}}" /></span>
-         <p>{{$linkss->titlepage}}<br>
-            Made by <a href="https://{{$linkss->instagram}}">@ {{$linkss->username}}</a>
+         <p>{{$linkss->titlepage}}.</p>
+         <p>Made by <a href="{{$linkss->instagram}}">@ {{$linkss->username}}</a>
          </p>
          @endforeach
       </header>
@@ -59,7 +59,10 @@
       @foreach ($userlink as $link)
       <section id="askfm">
          <ul class="actions fit">
-            <li><a href="{{$link->link}}" class="button large fit askfm-theme">{{$link->title}}
+            {{-- <li><a target="_blank" href="{{url('urllink')}}" id="linkdata-{{$link->id}}" data-id="{{$link->id}}"
+            class="button large fit askfm-theme linkurl">{{$link->title}}
+            </a></li> --}}
+            <li><a target="_blank" href="{{$link->link}}" class="button large fit askfm-theme">{{$link->title}}
                </a></li>
          </ul>
       </section>
@@ -100,6 +103,29 @@
    <script src="{!!asset('username/assets/js/breakpoints.min.js')!!}"></script>
    <script src="{!!asset('username/assets/js/util.js')!!}"></script>
    <script src="{!!asset('username/assets/js/main.js')!!}"></script>
+   <script>
+      $(document).ready(function () {
+         $.ajaxSetup({
+            headers: {
+               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+         });
+         $('a.linkurl').on('click', function (e) {
+            var el = $(this);
+            $.ajax({
+               type: "POST",
+               url: el.attr('href'),
+               data: {
+                  value: el.attr('data-id')
+               },
+               success: function (data) {
+                  console.log(data);
+               }
+            });
+            e.preventDefault();
+         });
+      });
+   </script>
 
 </body>
 

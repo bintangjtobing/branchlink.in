@@ -2596,7 +2596,7 @@ ol li {
 
 ul {
 	list-style: disc;
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 	padding-left: 1em;
 }
 
@@ -2758,7 +2758,7 @@ ul.actions.fit.stacked {
 	ul.actions:not(.fixed) li>* {
 		width: 100%;
 	}
-	
+
 	ul.actions:not(.fixed) li:first-child {
 		padding-top: 0;
 	}
@@ -2769,6 +2769,7 @@ ul.actions.fit.stacked {
 	ul.actions:not(.fixed) li button,
 	ul.actions:not(.fixed) li .button {
 		width: 90%;
+		font-size: 10px;
 	}
 
 	ul.actions:not(.fixed) li input[type="submit"].icon:before,
@@ -2847,6 +2848,14 @@ footer.major {
 }
 
 @media screen and (max-width: 736px) {
+
+	ul.actions:not(.fixed) li input[type="submit"],
+	ul.actions:not(.fixed) li input[type="reset"],
+	ul.actions:not(.fixed) li input[type="button"],
+	ul.actions:not(.fixed) li button,
+	ul.actions:not(.fixed) li .button {
+		font-size: 12px;
+	}
 
 	header.major {
 		margin-bottom: 0;

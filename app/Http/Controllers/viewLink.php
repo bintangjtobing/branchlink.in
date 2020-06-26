@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\User;
+use App\linkDB;
 
 class viewLink extends Controller
 {
@@ -17,5 +18,10 @@ class viewLink extends Controller
             ->get();
         // dd($userlink);
         return view('result.index', ['userlink' => $userlink]);
+    }
+    public function urllink(Request $request)
+    {
+        $value = $request->input('value');
+        return Response::JSON($value);
     }
 }

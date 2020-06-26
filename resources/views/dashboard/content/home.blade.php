@@ -52,9 +52,8 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                <div class="branchlinkshare">
-                  <p><b>My branchlink</b> account: <input type="text" id="accountbranchlink"
-                        value="https://branchlink.in/{{auth()->user()->username}}" readonly>
-
+                  <p><b>My branchlink</b> account: <a href="https://branchlink.in/u/{{auth()->user()->username}}"
+                        target="_blank">https://branchlink.in/u/{{auth()->user()->username}}</a>
                   </p>
                </div>
             </div>

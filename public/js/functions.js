@@ -13,7 +13,7 @@ var INSPIRO = {},
   "use strict"
   // Predefined Global Variables
   var $window = $(window),
-    $theme_color = "#2250fc",
+    $theme_color = "#f3751e",
     //Main
     $body = $("body"),
     $bodyInner = $(".body-inner"),

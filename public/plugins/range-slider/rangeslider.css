@@ -64,7 +64,7 @@
 
 .irs-line-right { height: 6px; background: #cecece; top: 5px; }
 
-.irs-bar { height: 6px; top: 30px; background-position: 0 -60px; background: #2250fc; }
+.irs-bar { height: 6px; top: 30px; background-position: 0 -60px; background: #f3751e; }
 
 .irs-bar-edge { top: 30px; height: 6px; width: 9px; background: #cecece; }
 
@@ -78,16 +78,16 @@
 
 .irs-min, .irs-max { color: #999; font-size: 10px; line-height: 1.333; text-shadow: none; top: 0; padding: 1px 3px; background: #e1e4e9; border-radius: 4px; }
 
-.irs-from, .irs-to, .irs-single { color: #ffffff; font-size: 10px; line-height: 1.333; text-shadow: none; padding: 2px 8px; background: #2250fc; border-radius: 4px; /* box-shadow: 0px 0px 12px rgba(0,0,0,0.2); */ }
+.irs-from, .irs-to, .irs-single { color: #ffffff; font-size: 10px; line-height: 1.333; text-shadow: none; padding: 2px 8px; background: #f3751e; border-radius: 4px; /* box-shadow: 0px 0px 12px rgba(0,0,0,0.2); */ }
 
-.irs-from:after, .irs-to:after, .irs-single:after { position: absolute; display: block; content: ""; bottom: -10px; left: 50%; width: 0; height: 0; margin-left: -5px; overflow: hidden; border: 5px solid transparent; border-top-color: #2250fc; }
+.irs-from:after, .irs-to:after, .irs-single:after { position: absolute; display: block; content: ""; bottom: -10px; left: 50%; width: 0; height: 0; margin-left: -5px; overflow: hidden; border: 5px solid transparent; border-top-color: #f3751e; }
 
 .irs-grid-pol { background: #f8f9fa; }
 
 .irs-grid-text { color: #626262; }
 
-.range-color-primary .irs-from:after, .range-color-primary .irs-to:after, .range-color-primary .irs-single:after { border-top-color: #2250fc; }
-.range-color-primary .irs-bar, .range-color-primary .irs-from, .range-color-primary .irs-to, .range-color-primary .irs-single { background: #2250fc; }
+.range-color-primary .irs-from:after, .range-color-primary .irs-to:after, .range-color-primary .irs-single:after { border-top-color: #f3751e; }
+.range-color-primary .irs-bar, .range-color-primary .irs-from, .range-color-primary .irs-to, .range-color-primary .irs-single { background: #f3751e; }
 
 .range-color-secondary .irs-from:after, .range-color-secondary .irs-to:after, .range-color-secondary .irs-single:after { border-top-color: #5A6268; }
 .range-color-secondary .irs-bar, .range-color-secondary .irs-from, .range-color-secondary .irs-to, .range-color-secondary .irs-single { background: #5A6268; }

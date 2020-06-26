@@ -51,8 +51,8 @@
 .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label { border-bottom-left-radius: 3px; border-top-left-radius: 3px; }
 
 .bootstrap-switch { border-width: 1px; border-color: #ececec; border-radius: 5px; }
-.bootstrap-switch .bootstrap-switch-on, .bootstrap-switch .bootstrap-switch-handle-on, .bootstrap-switch .bootstrap-switch-handle-off { background-color: #2250fc; border-color: #2250fc; color: #ffffff; }
-.bootstrap-switch .bootstrap-switch-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary { background-color: #2250fc; border-color: #2250fc; color: #ffffff; }
+.bootstrap-switch .bootstrap-switch-on, .bootstrap-switch .bootstrap-switch-handle-on, .bootstrap-switch .bootstrap-switch-handle-off { background-color: #f3751e; border-color: #f3751e; color: #ffffff; }
+.bootstrap-switch .bootstrap-switch-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary { background-color: #f3751e; border-color: #f3751e; color: #ffffff; }
 .bootstrap-switch .bootstrap-switch-on.bootstrap-switch-secondary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary { background-color: #5A6268; border-color: #5A6268; color: #cecece; }
 .bootstrap-switch .bootstrap-switch-on.bootstrap-switch-success, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success { background-color: #81c868; border-color: #81c868; color: #ffffff; }
 .bootstrap-switch .bootstrap-switch-on.bootstrap-switch-info, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info { background-color: #53b0f8; border-color: #53b0f8; color: #ffffff; }
@@ -73,7 +73,7 @@
 .p-radio > input[type="radio"] + .p-radio-style { position: relative; display: inline-block; width: 1.4em; height: 1.4em; vertical-align: middle; cursor: pointer; float: left; }
 .p-radio > input[type="radio"] + .p-radio-style:before { position: absolute; top: 0; left: 0; display: inline-block; width: 1.4em; height: 1.4em; content: ''; border: 1px solid #cecece; border-radius: 50%; }
 .p-radio > input[type="radio"] + .p-radio-style:after { position: absolute; display: none; content: ''; top: .15em; left: .5em; -webkit-box-sizing: border-box; box-sizing: border-box; width: .4em; height: .85em; -webkit-transform: rotate(45deg); transform: rotate(45deg); border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; }
-.p-radio > input[type="radio"]:checked + .p-radio-style:before { -webkit-animation-name: none; animation-name: none; border: 1px solid #2250fc; background: #2250fc; }
+.p-radio > input[type="radio"]:checked + .p-radio-style:before { -webkit-animation-name: none; animation-name: none; border: 1px solid #f3751e; background: #f3751e; }
 .p-radio > input[type="radio"]:checked + .p-radio-style:after { display: block; }
 .p-radio > input[type="radio"]:checked[disabled] + .p-radio-style { opacity: .6; }
 .p-radio > input[type="radio"][disabled] { cursor: not-allowed; }
@@ -85,7 +85,7 @@
 .p-radio.p-radio-sm { font-size: 75%; }
 .p-radio.p-radio-lg { font-size: 125%; }
 .p-radio.p-radio-xl { font-size: 150%; }
-.p-radio.radio-color-primary > input[type="radio"]:checked + .p-radio-style:before { background-color: #2250fc; border-color: #2250fc; }
+.p-radio.radio-color-primary > input[type="radio"]:checked + .p-radio-style:before { background-color: #f3751e; border-color: #f3751e; }
 .p-radio.radio-color-secondary > input[type="radio"]:checked + .p-radio-style:before { background-color: #5A6268; border-color: #5A6268; }
 .p-radio.radio-color-success > input[type="radio"]:checked + .p-radio-style:before { background-color: #81c868; border-color: #81c868; }
 .p-radio.radio-color-info > input[type="radio"]:checked + .p-radio-style:before { background-color: #53b0f8; border-color: #53b0f8; }
@@ -100,7 +100,7 @@
 .p-checkbox > input[type="checkbox"] + .p-checkbox-style { position: relative; display: inline-block; width: 1.4em; height: 1.4em; vertical-align: middle; cursor: pointer; float: left; }
 .p-checkbox > input[type="checkbox"] + .p-checkbox-style:before { position: absolute; top: 0; left: 0; display: inline-block; width: 1.4em; height: 1.4em; content: ''; border: 1px solid #cecece; border-radius: 3px; }
 .p-checkbox > input[type="checkbox"] + .p-checkbox-style:after { position: absolute; display: none; content: ''; top: .15em; left: .5em; -webkit-box-sizing: border-box; box-sizing: border-box; width: .4em; height: .85em; -webkit-transform: rotate(45deg); transform: rotate(45deg); border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; }
-.p-checkbox > input[type="checkbox"]:checked + .p-checkbox-style:before { -webkit-animation-name: none; animation-name: none; border: #2250fc; background: #2250fc; }
+.p-checkbox > input[type="checkbox"]:checked + .p-checkbox-style:before { -webkit-animation-name: none; animation-name: none; border: #f3751e; background: #f3751e; }
 .p-checkbox > input[type="checkbox"]:checked + .p-checkbox-style:after { display: block; }
 .p-checkbox > input[type="checkbox"]:checked[disabled] + .p-checkbox-style:before { opacity: 0.5; }
 .p-checkbox > input[type="checkbox"][disabled] { cursor: not-allowed; }
@@ -108,7 +108,7 @@
 .p-checkbox.p-checkbox-sm { font-size: 75%; }
 .p-checkbox.p-checkbox-lg { font-size: 125%; }
 .p-checkbox.p-checkbox-xl { font-size: 150%; }
-.p-checkbox.checkbox-color-primary > input[type="checkbox"]:checked + .p-checkbox-style:before { background-color: #2250fc; }
+.p-checkbox.checkbox-color-primary > input[type="checkbox"]:checked + .p-checkbox-style:before { background-color: #f3751e; }
 .p-checkbox.checkbox-color-secondary > input[type="checkbox"]:checked + .p-checkbox-style:before { background-color: #5A6268; }
 .p-checkbox.checkbox-color-success > input[type="checkbox"]:checked + .p-checkbox-style:before { background-color: #81c868; }
 .p-checkbox.checkbox-color-info > input[type="checkbox"]:checked + .p-checkbox-style:before { background-color: #53b0f8; }
@@ -125,14 +125,14 @@ label.p-checkbox { display: block; cursor: pointer; }
 .p-switch .p-switch-style { height: 1.6em; left: 0; background: #cecece; border-radius: .8em; display: inline-block; position: relative; top: 0; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; width: 3em; cursor: pointer; float: left; }
 .p-switch .p-switch-style:before { display: block; content: ''; height: 1.4em; position: absolute; width: 1.4em; background-color: #ffffff; border-radius: 50%; left: .1em; top: .1em; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 .p-switch > input[type="checkbox"] { display: none; }
-.p-switch > input[type="checkbox"]:checked + .p-switch-style { background-color: #2250fc; }
+.p-switch > input[type="checkbox"]:checked + .p-switch-style { background-color: #f3751e; }
 .p-switch > input[type="checkbox"]:checked + .p-switch-style:before { left: 50%; }
 .p-switch > input[type="checkbox"]:checked[disabled] + .p-switch-style { opacity: 0.5; }
 .p-switch.p-switch-sm { font-size: 75%; }
 .p-switch.p-switch-lg { font-size: 125%; }
 .p-switch.p-switch-xl { font-size: 150%; }
 .p-switch > input[type="checkbox"][disabled] + .p-switch-style { cursor: not-allowed; opacity: 0.5; }
-.p-switch.switch-color-primary > input[type="checkbox"]:checked + .p-switch-style { background-color: #2250fc; }
+.p-switch.switch-color-primary > input[type="checkbox"]:checked + .p-switch-style { background-color: #f3751e; }
 .p-switch.switch-color-secondary > input[type="checkbox"]:checked + .p-switch-style { background-color: #5A6268; }
 .p-switch.switch-color-success > input[type="checkbox"]:checked + .p-switch-style { background-color: #81c868; }
 .p-switch.switch-color-info > input[type="checkbox"]:checked + .p-switch-style { background-color: #53b0f8; }

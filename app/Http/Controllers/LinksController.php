@@ -11,6 +11,23 @@ use App\User;
 
 class LinksController extends Controller
 {
+    public function testvv()
+    {
+        $link = DB::table('links')
+            ->orderBy('links.created_at', 'DESC')
+            ->select('links.*')
+            ->where('links.ownerid', '=', Auth::id())
+            ->get();
+        // dd($link);
+        // $getid =  auth()->user()->id;
+        $opt = DB::table('optionaldbs')
+            ->select('optionaldbs.*')
+            // ->where('optionaldbs.userid', '=', auth()->user()->id)
+            ->orderBy('optionaldbs.created_at', 'DESC')
+            ->first();
+        return view('dashboardv2.master', ['link' => $link, 'opt' => $opt]);
+        // return view('dashboard.content.home');
+    }
     public function index()
     {
         $link = DB::table('links')
@@ -18,10 +35,25 @@ class LinksController extends Controller
             ->select('links.*')
             ->where('links.ownerid', '=', Auth::id())
             ->get();
-
         // dd($link);
-        return view('dashboard.content.home', ['link' => $link]);
+        // $getid =  auth()->user()->id;
+        $opt = DB::table('optionaldbs')
+            ->select('optionaldbs.*')
+            ->where('optionaldbs.userid', '=', auth()->user()->id)
+            ->orderBy('optionaldbs.created_at', 'DESC')
+            ->first();
+        return view('dashboard.content.home', ['link' => $link, 'opt' => $opt]);
         // return view('dashboard.content.home');
+    }
+    public function appearance()
+    {
+        $getid =  auth()->user()->id;
+        $opt = DB::table('optionaldbs')
+            ->select('optionaldbs.*')
+            ->where('optionaldbs.userid', '=', $getid)
+            ->orderBy('optionaldbs.created_at', 'DESC')
+            ->first();
+        return view('dashboard.content.themes', ['opt' => $opt]);
     }
     public function addlink(Request $request)
     {
@@ -57,16 +89,7 @@ class LinksController extends Controller
             }
         }
     }
-    public function appearance()
-    {
-        $getid =  auth()->user()->id;
-        $opt = DB::table('optionaldbs')
-            ->select('optionaldbs.*')
-            ->where('optionaldbs.userid', '=', $getid)
-            ->orderBy('optionaldbs.created_at', 'DESC')
-            ->first();
-        return view('dashboard.content.themes', ['opt' => $opt]);
-    }
+
     public function settings()
     {
         return view('dashboard.content.settings');

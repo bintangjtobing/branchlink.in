@@ -172,7 +172,7 @@
   height: 6px;
   top: 30px;
   background-position: 0 -60px;
-  background: #2250fc; }
+  background: #f3751e; }
 
 .irs-bar-edge {
   top: 30px;
@@ -219,7 +219,7 @@
   line-height: 1.333;
   text-shadow: none;
   padding: 2px 8px;
-  background: #2250fc;
+  background: #f3751e;
   -moz-border-radius: 4px;
   border-radius: 4px;
   /* box-shadow: 0px 0px 12px rgba(0,0,0,0.2); */ }
@@ -235,7 +235,7 @@
   margin-left: -5px;
   overflow: hidden;
   border: 5px solid transparent;
-  border-top-color: #2250fc; }
+  border-top-color: #f3751e; }
 
 .irs-grid-pol {
   background: #f8f9fa; }
@@ -244,9 +244,9 @@
   color: #626262; }
 
 .range-color-primary .irs-from:after, .range-color-primary .irs-to:after, .range-color-primary .irs-single:after {
-  border-top-color: #2250fc; }
+  border-top-color: #f3751e; }
 .range-color-primary .irs-bar, .range-color-primary .irs-from, .range-color-primary .irs-to, .range-color-primary .irs-single {
-  background: #2250fc; }
+  background: #f3751e; }
 
 .range-color-secondary .irs-from:after, .range-color-secondary .irs-to:after, .range-color-secondary .irs-single:after {
   border-top-color: #5A6268; }

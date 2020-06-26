@@ -72,7 +72,7 @@
                      <nav>
                         <ul>
                            {{-- <li><a href="index.html">Home</a></li> --}}
-                           <li class="dropdown"><a href="#">Bintang Tobing</a>
+                           <li class="dropdown"><a href="#">{{auth()->user()->name}}</a>
                               <ul class="dropdown-menu">
                                  <li><a href="/logout/{{auth()->user()->id}}">Logout</a></li>
                               </ul>
@@ -91,7 +91,7 @@
                   <div class="col-lg-10 center m-b-40">
                      <div class="text-center">
                         <h2 class="text-medium">Dashboard</h2>
-                        <p class="p-b-0">Hello Bintang Tobing.</p>
+                        <p class="p-b-0">Hello {{auth()->user()->name}}.</p>
                      </div>
                   </div>
                </div>

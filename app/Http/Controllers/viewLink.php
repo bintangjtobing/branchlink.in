@@ -15,6 +15,7 @@ class viewLink extends Controller
             ->join('links', 'users.id', '=', 'links.ownerid')
             ->select('links.*', 'users.*')
             ->where('users.username', '=', $username)
+            ->orderBy('links.created_at', 'DESC')
             ->get();
         // dd($userlink);
         return view('result.index', ['userlink' => $userlink]);

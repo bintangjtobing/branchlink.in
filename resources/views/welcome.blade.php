@@ -484,6 +484,17 @@
             </div>
         </div>
     </div>
+    <?php $y = date('Y') ?>
+    <footer id="footer">
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">&copy; {{$y}} BRANCHLINK.IN FROM SARJANAMALAM.
+                    All
+                    Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Vendor JS-->
     <script src="welcome/plugins/jquery/jquery.min.js"></script>
     <script src="welcome/plugins/jquery/jquery-migrate.min.js"></script>

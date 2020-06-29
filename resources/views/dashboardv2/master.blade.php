@@ -71,16 +71,15 @@
          @endforeach
       </div>
    </div>
+   @foreach ($userlink->take(1) as $linkfooter)
    <div class="container">
       <section id="wanna">
          <div class="row">
-            @foreach ($userlink->take(1) as $linkfooter)
             <div class="col-lg-12 text-left">
                <h3 class="mb-3">Contact me as a personal?</h3>
                <h5>Email me: <span class="dottedbottom"><a
                         href="mailto:{{$linkfooter->email}}">{{$linkfooter->email}}</a></span></h5>
             </div>
-            @endforeach
          </div>
       </section>
    </div>
@@ -89,11 +88,13 @@
          <div class="row align-items-start">
             <div class="col-lg-12 text-center">
                <?php $y = date('Y') ?>
-               <p>&copy; Copyright {{$y}} - Bintang J Tobing. All reserved.<br>Made with &#129505; by Sarjanamalam.</p>
+               <p>&copy;Copyright {{$y}} - {{$linkfooter->name}}. All reserved.<br>Made with &#129505; by Sarjanamalam.
+               </p>
             </div>
          </div>
       </div>
    </footer>
+   @endforeach
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->

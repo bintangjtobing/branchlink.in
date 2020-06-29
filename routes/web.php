@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Redirect;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/vv', 'LinksController@testvv');
+Route::get('/vv', 'LinksController@testvv');
 Route::get('/login', function () {
     return view('login.signin');
 })->name('login');

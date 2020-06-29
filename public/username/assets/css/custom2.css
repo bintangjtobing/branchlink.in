@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,700&display=swap');
+
+html,
+body {
+   height: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+   font-family: 'Karla', sans-serif;
+}
+
+body {
+   background: rgb(2, 0, 36);
+   background: linear-gradient(119deg, rgba(2, 0, 36, 1) 0%, rgba(241, 39, 17, 1) 0%, rgba(245, 175, 25, 1) 100%) no-repeat center center fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+
+.imguser-profile {
+   object-fit: cover;
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+}
+
+.headertop h4,
+h5 {
+   color: #fff;
+}
+
+.headertop a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.headertop h5 {
+   font-weight: 300 !important;
+   font-size: 16px;
+}
+
+.headertop .dottedbottom {
+   border-bottom: dotted 1px;
+}
+
+.rowlist a {
+   color: #1c1c1c;
+   text-decoration: none;
+}
+
+.rowlist a:hover {
+   color: rgba(245, 175, 25, 1)
+}

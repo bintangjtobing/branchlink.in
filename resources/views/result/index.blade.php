@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 
-
 <head>
    @foreach ($userlink->take(1) as $itemlink)
    <title>{{$itemlink->titlepage}} - {{$itemlink->name}}</title>

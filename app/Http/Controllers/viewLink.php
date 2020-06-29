@@ -18,7 +18,7 @@ class viewLink extends Controller
             ->orderBy('links.created_at', 'DESC')
             ->get();
         // dd($userlink);
-        return view('result.index', ['userlink' => $userlink]);
+        return view('dashboardv2.master', ['userlink' => $userlink]);
     }
     public function urllink(Request $request)
     {

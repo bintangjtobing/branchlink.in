@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-   <title>Title</title>
+   @foreach ($userlink->take(1) as $itemlink)
+   <title>{{$itemlink->titlepage}} - {{$itemlink->name}}</title>
+   <link rel="icon" href="{!!asset('images/icon.png')!!}">
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,75 +13,87 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="{!!asset('username/assets/css/custom2.css')!!}" />
+   <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"
+      type="96955bc328fcaeae7f75a015-text/javascript"></script>
+
+   {{-- Meta Content --}}
+   {{-- META CONTENT --}}
+   <meta name="title" content="{{$itemlink->titlepage}} - {{$itemlink->name}}">
+   <meta name="keywords" content="{{$itemlink->titlepage}}, {{$itemlink->name}}">
+   <meta name="description"
+      content="Take your any link to branchlink, to discover all of your content. And help them to find you.">
+   <meta name="author" content="Branchlink.in from Sarjanamalam">
+   <meta name="robots" content="index, follow">
+   <meta name="language" content="English">
+   {{-- SOCIAL MEDIA TAGS --}}
+   {{-- FACEBOOK SOCMED --}}
+   <meta property="fb:admins" content="111044563749542">
+   <meta property="og:title" content="{{$itemlink->titlepage}} - {{$itemlink->name}}">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="{{URL::current()}}">
+   <meta property="og:image" content="{!!asset('storage/img/covermcan.jpg')!!}">
+   <meta property="og:description"
+      content="Take your any link to branchlink, to discover all of your content. And help them to find you.">
+   <meta property="og:site_name" content="{{$itemlink->name}}.">
+   <!-- Twitter -->
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:url" content="{{URL::current()}}">
+   <meta property="twitter:title" content="{{$itemlink->titlepage}} - {{$itemlink->name}}">
+   <meta property="twitter:description"
+      content="{{$itemlink->name}} page is made for personal creative curriculum vitae. Also for personal satisfaction and personal completeness in this digital age.">
+   <meta property="twitter:image" content="{!!asset('storage/img/covermcan.jpg')!!}">
+   @endforeach
 </head>
 
 <body>
    <div class="container my-5">
       <div class="row align-items-start">
          <div class="col-lg-12 col-md-12 col-sm-12 text-center headertop">
-            <img
-               src="https://lh3.googleusercontent.com/proxy/DDwMqs_ULrv5X-DmfiwS6VuRiUHScFjVLvlgd2I6-MfhbjqmSYvo0qVpZMBXziec3zXKOX-OZIv33_BlJjYRrWEQePIzlZfweCZEz99qTH_XyXmsXFeoyr9N0Ge17pbUBT8"
-               alt="display picture" class="imguser-profile">
-            <h4 class="mt-3">Baca sekilas yuk gaes!</h4>
-            <h5 class="mb-4">Made by <span class="dottedbottom"><a href="#">@bintangtobing</a></span></h5>
+            @foreach ($userlink->take(1) as $linkss)
+            <img src="{!!asset('media/'.$linkss->avatar)!!}" alt="Display picture {{$linkss->name}}"
+               class="imguser-profile">
+            <h4 class="mt-3">{{$linkss->titlepage}}</h4>
+            <h5 class="mb-4">Made by <span class="dottedbottom"><a
+                     href="{{$linkss->instagram}}"><?php echo urldecode('%40')?>{{$linkss->username}}</a></span></h5>
+            {{-- <h5 class="mb-4">Jaka si tikus yang suka berbagi informasi seputar teknologi setiap hari! 🐭</h5> --}}
+            @endforeach
          </div>
       </div>
       <div class="row align-items-start rowlist">
+         @foreach ($userlink as $link)
          <div class="col-lg-12 my-2 text-center">
             <div class="card">
                <div class="card-body">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum necessitatibus molestiae
-                     dolorum quis
-                     itaque veniam?</a>
+                  <a href="{{$link->link}}" target="_blank">{{$link->title}}</a>
                </div>
             </div>
          </div>
-         <div class="col-lg-12 my-2 text-center">
-            <div class="card">
-               <div class="card-body">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum necessitatibus</a>
-               </div>
+         @endforeach
+      </div>
+   </div>
+   <div class="container">
+      <section id="wanna">
+         <div class="row">
+            @foreach ($userlink->take(1) as $linkfooter)
+            <div class="col-lg-12 text-left">
+               <h3 class="mb-3">Contact me as a personal?</h3>
+               <h5>Email me: <span class="dottedbottom"><a
+                        href="mailto:{{$linkfooter->email}}">{{$linkfooter->email}}</a></span></h5>
             </div>
+            @endforeach
          </div>
-         <div class="col-lg-12 my-2 text-center">
-            <div class="card">
-               <div class="card-body">
-                  <a href="#">consectetur adipisicing elit. A cum necessitatibus molestiae
-                     dolorum quis
-                     itaque veniam?</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-12 my-2 text-center">
-            <div class="card">
-               <div class="card-body">
-                  <a href="#">Lorem Lorem</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-12 my-2 text-center">
-            <div class="card">
-               <div class="card-body">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum necessitatibus molestiae
-                     dolorum quis
-                     itaque veniam?</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-12 my-2 text-center">
-            <div class="card">
-               <div class="card-body">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum necessitatibus molestiae
-                     dolorum quis
-                     itaque veniam?</a>
-               </div>
+      </section>
+   </div>
+   <footer>
+      <div class="container my-5">
+         <div class="row align-items-start">
+            <div class="col-lg-12 text-center">
+               <?php $y = date('Y') ?>
+               <p>&copy; Copyright {{$y}} - Bintang J Tobing. All reserved.<br>Made with &#129505; by Sarjanamalam.</p>
             </div>
          </div>
       </div>
-   </div>
-   <section id="wanna">
-
-   </section>
+   </footer>
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->

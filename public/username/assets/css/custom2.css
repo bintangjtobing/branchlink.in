@@ -26,8 +26,8 @@ body {
 
 .imguser-profile {
    object-fit: cover;
-   width: 90px;
-   height: 90px;
+   width: 120px;
+   height: 120px;
    border-radius: 50%;
 }
 
@@ -46,15 +46,38 @@ h5 {
    font-size: 16px;
 }
 
-.headertop .dottedbottom {
+.dottedbottom {
    border-bottom: dotted 1px;
 }
 
 .rowlist a {
+   font-weight: 600;
    color: #1c1c1c;
    text-decoration: none;
 }
 
-.rowlist a:hover {
-   color: rgba(245, 175, 25, 1)
+.rowlist .card:hover {
+   background-color: #D9D3CA;
+   cursor: pointer;
+}
+
+#wanna h3 {
+   color: #fff;
+}
+
+#wanna a {
+   color: #fff;
+   text-decoration: none;
+}
+
+#wanna a:hover {
+   color: #D9D3CA;
+}
+
+.btn-social {
+   padding: 15px 15px;
+}
+
+footer p {
+   color: #fff;
 }

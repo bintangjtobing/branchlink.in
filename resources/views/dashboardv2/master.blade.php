@@ -88,7 +88,8 @@
          <div class="row align-items-start">
             <div class="col-lg-12 text-center">
                <?php $y = date('Y') ?>
-               <p>&copy;Copyright {{$y}} - {{$linkfooter->name}}. All reserved.<br>Made with &#129505; by Sarjanamalam.
+               <p>&copy;Copyright {{$y}} - {{$linkfooter->name}}. All reserved.<br>MADE WITH &#129505; BY <span
+                     class="dottedbottom">BRANCHLINK.IN</span> FROM <span class="dottedbottom">SARJANAMALAM</span>.
                </p>
             </div>
          </div>
